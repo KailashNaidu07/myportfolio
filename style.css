@@ -63,7 +63,7 @@ box-sizing: border-box;
     background: url('./Images/bg/bg.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
-    /* justify-content: center; */
+    
     align-items: center;
     
     
@@ -85,7 +85,7 @@ box-sizing: border-box;
     position: relative;
     font-size: 50px;
     font-weight: bold;
-    z-index: 1;
+    
   }
   
   
@@ -97,6 +97,45 @@ margin-top: -210px;
 } 
 
 
+/* ====== Social Icons Styling ====== */
+.icons4 {
+  position: absolute;
+  top: 65%;
+  display: flex;
+  gap: 25px;
+  
+}
+
+.icons4 a {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icons4 img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* ====== Hover Effects ====== */
+.icons4 a:hover img {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ====== Individual Icon Color Effects ====== */
+#linkedin:hover {
+  filter: drop-shadow(0px 0px 10px #0a66c2);
+}
+
+.github:hover {
+  filter: drop-shadow(0px 0px 10px #333);
+}
+
+.instagram:hover {
+  filter: drop-shadow(0px 0px 10px #e1306c);
+}
 
 
 
@@ -105,27 +144,18 @@ margin-top: -210px;
 
 .aboutbackgroundimg {
     position: relative;
-    background: url('./Images/bg/aboutbg.png') no-repeat center center/cover;
+    background: url('Images/bg/aboutbg.png') no-repeat center center/cover;
     height: 100vh;
     display: flex;
-    /* justify-content: center; */
+    
     align-items: center;
     
     
   }
   
-  /* Dark overlay */
-  .aboutbackgroundimg::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-   
-  }
 
-  .info-icons img
+
+  .info-icons2 img
   {
     width: 24px;
   }
@@ -221,3 +251,28 @@ html {
     height: 100%;
    
   }
+
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0px 4px 20px rgba(0, 123, 255, 0.5); /* Blue glow */
+  transform: scale(1.03);
+}
+.card {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  background-color: #f8f9fa; /* Light grey background */
+  transform: translateY(-5px); /* Slight lift effect */
+}
